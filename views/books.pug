@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .page-header
+    h3 All Books
+
+  ul
+    for book in books
+      li= book.name
+  
+  div.csrfContainer hello 
+    // Make a get call to other domain. SOP allows it.
+    img.csrf-image(src='http://orig11.deviantart.net/1db8/f/2016/106/b/7/light_perhaps_by_milliganvick-d9z4q8m.jpg', width=600)
+    // Submit a multi step response.
+    div.chained-iframe
+    // Submit a post using XHR. Break the MVC controllers.
+    // Since Cors if allowed. Will be able to post to other domain using xhr./
+    // No protection done by TFS controllers for CORS, we should be able to hit the controllers?
+    div.poor-cors-no-csrf-break
+    // Breaking by a document post. Allowed by SOP. So no poor cors required. Just poor CSRF security
+    // Also try encoding type? If that can break the content-type safe.
+    form.break-csrf-by-form
