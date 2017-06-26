@@ -9,3 +9,9 @@ exports.getBooks = (req, res) => {
     res.render('books', { books: docs });
   });
 };
+
+// exports.postBooks = (req, res) => {
+//   Book.find((err, docs) => {
+//     res.render('books', { books: docs });
+//   });
+// };
