@@ -11,12 +11,20 @@ block content
   div.csrfContainer hello 
     // Make a get call to other domain. SOP allows it.
     img.csrf-image(src='http://vagupt-dt:8080/tfs/DefaultCollection/_apis/Favorite/Favorites?artifactType=Microsoft.TeamFoundation.Classification.TeamProject&artifactId=8573ff84-526d-4b28-aaf7-5072f7ac800a&artifactScopeType=Project&artifactScopeId=8573ff84-526d-4b28-aaf7-5072f7ac800a', width=600)
+    // Make a get call to other domain using XHR. CORS allows the XHR request but throws an error before returning response.
+    div.csrf-cors-get
+    // Fails in preflight. As we check the domain in the 
+    div.csrf-cors-post-put-delete
     // Submit a multi step response.
     div.chained-iframe
     // Submit a post using XHR. Break the MVC controllers.
     // Since Cors if allowed. Will be able to post to other domain using xhr./
     // No protection done by TFS controllers for CORS, we should be able to hit the controllers?
+    // NOT POSSIBLE. BECAUSE OF THE TfsAntiForgeryValidation ON THE WebPlatformController
+    // Should we disable it for the sake of the demo?
     div.poor-cors-no-csrf-break
     // Breaking by a document post. Allowed by SOP. So no poor cors required. Just poor CSRF security
     // Also try encoding type? If that can break the content-type safe.
+    // PREFLIGHT FAILS. AS ONLY PARTICULAR ORIGINS ARE ALLLOWED. UNABLE TO REACH CONTENT-TYPE.
     form.break-csrf-by-form
+    // Why was the content type a vulnerability? As we won't even reach the content type step.
