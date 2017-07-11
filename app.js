@@ -137,7 +137,12 @@ app.post('/account/delete', passportConfig.isAuthenticated, userController.postD
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 app.route('/books')
   .get(booksController.getBooks);
-
+app.route('/simple-attack')
+  .get((req, res) => {
+    res.render('simple-attack', {
+      title: 'simple-attack'
+    })
+  });
 
 /**
  * API examples routes.
