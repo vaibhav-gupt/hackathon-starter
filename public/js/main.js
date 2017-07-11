@@ -22,16 +22,37 @@ $(document).ready(function() {
   //   }
   // });
 
-  $.ajax({
-    // type: "POST",
-    url: 'http://vagupt-dt:8080/tfs/DefaultCollection/_apis/Favorite/Favorites?artifactType=Microsoft.TeamFoundation.Classification.TeamProject&artifactId=8573ff84-526d-4b28-aaf7-5072f7ac800a&artifactScopeType=Project&artifactScopeId=8573ff84-526d-4b28-aaf7-5072f7ac800a',
-    data: null,
-    success: function(data){console.log(data)},
-    dataType: undefined,
-    xhrFields: {
-        withCredentials: true
-    }
-  });
+  // $.ajax({
+  //   // type: "POST",
+  //   url: 'https://test.me.tfsallin.net:444/_apis/Favorite/Favorites?artifactType=Microsoft.TeamFoundation.Classification.TeamProject',
+  //   data: null,
+  //   success: function(data){console.log(data)},
+  //   dataType: undefined,
+  //   xhrFields: {
+  //       withCredentials: true
+  //   }
+  // });
+
+//XMLHttpRequest cannot load https://test.me.tfsallin.net:444/_apis/Favorite/Favorites. Response to preflight request doesn't pass access control check: The value of the 'Access-Control-Allow-Origin' header in the response must not be the wildcard '*' when the request's credentials mode is 'include'. Origin 'http://localhost:3000' is therefore not allowed access. The credentials mode of requests initiated by the XMLHttpRequest is controlled by the withCredentials attribute.
+  // $.ajax({
+  //   type: "POST",
+  //   url: 'https://test.me.tfsallin.net:444/_apis/Favorite/Favorites',
+  //   data: '{"artifactId":"81a610eb-1b92-4ad1-b547-de1427773951","artifactName":"1","artifactScope":{"type":"Project","id":"81a610eb-1b92-4ad1-b547-de1427773951","name":"1"},"artifactType":"Microsoft.TeamFoundation.Classification.TeamProject"}',
+  //   success: function(data){console.log(data)},
+  //   contentType: 'application/json',
+  //   xhrFields: {
+  //       withCredentials: true
+  //   }
+  // });
+
+  // Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
+  // $.ajax({
+  //   type: "POST",
+  //   url: 'https://test.me.tfsallin.net:444/_apis/Favorite/Favorites',
+  //   data: '{"artifactId":"81a610eb-1b92-4ad1-b547-de1427773951","artifactName":"1","artifactScope":{"type":"Project","id":"81a610eb-1b92-4ad1-b547-de1427773951","name":"1"},"artifactType":"Microsoft.TeamFoundation.Classification.TeamProject"}',
+  //   success: function(data){console.log(data)},
+  //   contentType: 'application/json'
+  // });
 
   // Fails with CSRF token missing exception
   // Because of https://mseng.visualstudio.com/VSOnline/_git/VSO?path=%2FTfs%2FService%2FWebAccess%2FServer%2FTfsController.cs&version=GBmaster&_a=annotate&line=28&lineStyle=plain&lineEnd=28&lineStartColumn=5&lineEndColumn=31

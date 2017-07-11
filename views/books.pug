@@ -9,6 +9,7 @@ block content
       li= book.name
   
   div.csrfContainer hello 
+    script(src='https://mseng.visualstudio.com')
     // Make a get call to other domain. SOP allows it.
     img.csrf-image(src='http://vagupt-dt:8080/tfs/DefaultCollection/_apis/Favorite/Favorites?artifactType=Microsoft.TeamFoundation.Classification.TeamProject&artifactId=8573ff84-526d-4b28-aaf7-5072f7ac800a&artifactScopeType=Project&artifactScopeId=8573ff84-526d-4b28-aaf7-5072f7ac800a', width=600)
     // Make a get call to other domain using XHR. CORS allows the XHR request but throws an error before returning response.
