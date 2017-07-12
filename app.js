@@ -143,6 +143,12 @@ app.route('/simple-attack')
       title: 'simple-attack'
     })
   });
+app.route('/attack-with-credentials')
+  .get((req, res) => {
+    res.render('Attack-with-credentials', {
+      title: 'attack-with-credentials'
+    })
+  });
 
 /**
  * API examples routes.

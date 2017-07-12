@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
   // Place JavaScript code here...
-  console.log('bingo');
   var el = $('.csrfContainer');
-
   // XMLHttpRequest cannot load. Response to preflight request doesn't pass access control check: 
   //The value of the 'Access-Control-Allow-Origin' header in the response must not be the wildcard '*' 
   // when the request's credentials mode is 'include'. Origin 'http://localhost:3000' is therefore not allowed access.
