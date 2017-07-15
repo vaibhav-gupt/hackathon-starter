@@ -139,25 +139,25 @@ app.route('/books')
   .get(booksController.getBooks);
 app.route('/simple-attack')
   .get((req, res) => {
-    res.render('simple-attack', {
+    res.render('csrf/simple-attack', {
       title: 'simple-attack'
     })
   });
 app.route('/attack-with-credentials')
   .get((req, res) => {
-    res.render('Attack-with-credentials', {
+    res.render('csrf/Attack-with-credentials', {
       title: 'attack-with-credentials'
     })
   });
 app.route('/cors-without-credentials')
   .get((req, res) => {
-    res.render('Cors-without-credentials', {
+    res.render('csrf/Cors-without-credentials', {
       title: 'cors-without-credentials'
     })
   });
 app.route('/form-post-csrf')
   .get((req, res) => {
-    res.render('form-post-csrf', {
+    res.render('csrf/form-post-csrf', {
       title: 'form-post-csrf'
     })
   });

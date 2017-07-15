@@ -1,7 +1,7 @@
-extends layout
+extends ../layout
 
 block content
-  include partials/attacknav
+  include base-attack-nav
   script(src='/js/lib/jquery-3.1.1.min.js')
   .page-header
     h3 CSRF Form Post
@@ -9,8 +9,6 @@ block content
   h3 CSRF attack against a controller that doesn't specify content type restriction
   div.csrfContainer hello 
   -
-    var repoId = "b464143e-a69b-4893-addd-29ccf6b0026e";
-    var accountName = "test";
     var oldObjectId = '9cf0e626d95c090e02e0dd6253f5e1cb27a5d201';
     var name = 'refs/heads/deployment';
 

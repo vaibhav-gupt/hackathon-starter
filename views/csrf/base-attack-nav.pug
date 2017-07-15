@@ -1,3 +1,18 @@
+-
+  // Server side config - Standard constants that are used across demos 
+  var repoId = "b464143e-a69b-4893-addd-29ccf6b0026e";
+  var accountName = "test";
+  var projectName = "OrgSearch";
+  var favoriteArtifactId = "e436e95b-a029-4edf-a27e-8de65c279cad";
+
+script.
+  // Client side config
+  var repoId = "#{repoId}";
+  var accountName = "#{accountName}";
+  var projectName = "#{projectName}";
+  var artifactId = "#{favoriteArtifactId}";
+
+script(src='/js/lib/jquery-3.1.1.min.js')
 
 ul.nav.navbar-nav
   li(class=(title == 'simple-attack') ? 'active' : undefined)
