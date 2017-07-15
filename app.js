@@ -149,6 +149,18 @@ app.route('/attack-with-credentials')
       title: 'attack-with-credentials'
     })
   });
+app.route('/cors-without-credentials')
+  .get((req, res) => {
+    res.render('Cors-without-credentials', {
+      title: 'cors-without-credentials'
+    })
+  });
+app.route('/form-post-csrf')
+  .get((req, res) => {
+    res.render('form-post-csrf', {
+      title: 'form-post-csrf'
+    })
+  });
 
 /**
  * API examples routes.

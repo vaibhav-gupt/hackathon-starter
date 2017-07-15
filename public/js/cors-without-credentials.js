@@ -22,9 +22,6 @@ $(document).ready(function() {
         dataType: "json",
         success: function(data) {$('.csrfContainer').html(data);},
         contentType: 'application/json',
-        xhrFields: {
-            withCredentials: true
-        },
         headers: {
             Accept: "application/json; api-version=3.2-preview.1"
         }
