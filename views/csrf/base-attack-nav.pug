@@ -1,16 +1,23 @@
 -
   // Server side config - Standard constants that are used across demos 
-  var repoId = "b464143e-a69b-4893-addd-29ccf6b0026e";
+  var repoId = "c09f849b-5905-49a7-9582-32519301aec2";
   var accountName = "test";
   var projectName = "OrgSearch";
-  var favoriteArtifactId = "e436e95b-a029-4edf-a27e-8de65c279cad";
-
+  var favoriteArtifactId = "ed606e87-ac34-4b7b-a1e8-f0faf061f934";// update in ProjectOverview as well.
+  // form post csrf. Branch will be deleted.
+  var branchObjectId = '2ec3852df93b17e582dd42e6ce0eb7a1f4d60e65';
+  var branchName = 'refs/heads/prod-deployment';
+  // This repository will be deleted in the attack
+  var simpleAttackRepoId = "c310ebfb-f355-4ec4-b8b0-f04d11c5f1b0";
 script.
   // Client side config
   var repoId = "#{repoId}";
   var accountName = "#{accountName}";
   var projectName = "#{projectName}";
   var artifactId = "#{favoriteArtifactId}";
+  var simpleAttackRepoId = "#{simpleAttackRepoId}";
+  var branchName = "#{branchName}";
+  var branchObjectId = "#{branchObjectId}";
 
 script(src='/js/lib/jquery-3.1.1.min.js')
 
@@ -23,3 +30,5 @@ ul.nav.navbar-nav
     a(href='/cors-without-credentials') CORS without credentials
   li(class=(title == 'form-post-csrf') ? 'active' : undefined)
     a(href='/form-post-csrf') Form Post CSRF
+br
+br

